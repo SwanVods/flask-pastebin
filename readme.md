@@ -2,16 +2,14 @@
 This is a simple Flask app that provides a pastebin-like functionality using a REST API. It uses SQLite as the database and can be easily containerized with Docker.
 
 ## Table of Contents
-- [Flask Pastebin-like App](#flask-pastebin-like-app)
-  - [Table of Contents](#table-of-contents)
-    - [Running the Application](#running-the-application)
-    - [Available API Endpoints](#available-api-endpoints)
-      - [Get All Public Notes](#get-all-public-notes)
-      - [Get a Specific Note](#get-a-specific-note)
-      - [Create a New Note](#create-a-new-note)
-      - [Update a Note](#update-a-note)
-      - [Delete a Note](#delete-a-note)
-    - [Architecture Overview](#architecture-overview)
+- [Running the Application](#running-the-application)
+- [Available API Endpoints](#available-api-endpoints)
+    - [Get All Public Notes](#get-all-public-notes)
+    - [Get a Specific Note](#get-a-specific-note)
+    - [Create a New Note](#create-a-new-note)
+    - [Update a Note](#update-a-note)
+    - [Delete a Note](#delete-a-note)
+- [Architecture Overview](#architecture-overview)
 
 
 ### Running the Application
@@ -194,4 +192,9 @@ Tools:
 
 The architecture is designed in such a way that the presentation layer is separated from the business logic layer, and the business logic layer is separated from the data storage layer. The presentation layer (Flask) communicates with the business logic layer through a set of RESTful APIs. The business logic layer (SQLAlchemy) communicates with the data storage layer (SQLite) to persist data.
 
-Overall, the architecture provides a scalable and maintainable solution for developing RESTful APIs using Flask and SQLite.
+### Future Improvements
+- Add authentication and authorization
+- Implement input validation and sanitization to prevent injection attacks or malicious user input.
+- Add support for other databases or data stores, such as MongoDB or AWS DynamoDB.
+- Implement rate limiting to prevent abuse or overuse of the API.
+- Implement testing for edge cases and scenarios that may not be covered in the current test suite.
