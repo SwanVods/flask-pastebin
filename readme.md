@@ -10,6 +10,7 @@ This is a simple Flask app that provides a pastebin-like functionality using a R
     - [Update a Note](#update-a-note)
     - [Delete a Note](#delete-a-note)
 - [Architecture Overview](#architecture-overview)
+- [Future Improvements](#future-improvements)
 
 
 ### Running the Application
