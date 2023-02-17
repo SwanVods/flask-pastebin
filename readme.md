@@ -32,23 +32,24 @@ To run the application, follow these steps:
    ```
    source venv/bin/activate
    ```
-6. Install the dependencies: 
+
+5. Install the dependencies: 
    ```
    pip install -r requirements.txt
    ```
-7. Initialize the database : 
+6. Initialize the database : 
    ```
    flask db init
    ```
-8. Start migration: 
+7. Start migration: 
    ```
    flask db migrate
    ```
-9.  Create the database: 
+8. Create the database: 
    ```
    flask db upgrade
    ```
-10. Start the server: 
+9. Start the server: 
    ```
    flask run
    ``` 
@@ -56,7 +57,7 @@ To run the application, follow these steps:
    ```
    docker-compose up
    ```
-11. The server should now be running on `http://localhost:5000`
+10. The server should now be running on `http://localhost:5000`
 
 To test the application, run the following command:
 ```python -m unittest test_views.py```
