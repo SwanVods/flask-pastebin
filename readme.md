@@ -2,16 +2,14 @@
 This is a simple Flask app that provides a pastebin-like functionality using a REST API. It uses SQLite as the database and can be easily containerized with Docker.
 
 ## Table of Contents
-- [Flask Pastebin-like App](#flask-pastebin-like-app)
-  - [Table of Contents](#table-of-contents)
-    - [Running the Application](#running-the-application)
-    - [Available API Endpoints](#available-api-endpoints)
-      - [Get All Public Notes](#get-all-public-notes)
-      - [Get a Specific Note](#get-a-specific-note)
-      - [Create a New Note](#create-a-new-note)
-      - [Update a Note](#update-a-note)
-      - [Delete a Note](#delete-a-note)
-    - [Architecture Overview](#architecture-overview)
+- [Running the Application](#running-the-application)
+- [Available API Endpoints](#available-api-endpoints)
+  - [Get All Public Notes](#get-all-public-notes)
+  - [Get a Specific Note](#get-a-specific-note)
+  - [Create a New Note](#create-a-new-note)
+  - [Update a Note](#update-a-note)
+  - [Delete a Note](#delete-a-note)
+- [Architecture Overview](#architecture-overview)
 
 
 ### Running the Application
