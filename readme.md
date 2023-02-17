@@ -55,8 +55,11 @@ To run the application, follow these steps:
    ```
 10. The server should now be running on `http://localhost:5000`
 
+
 To test the application, run the following command:
-```python -m unittest test_views.py```
+```
+python -m unittest test_views.py
+```
 
 ### Available API Endpoints
 The following API endpoints are available:
@@ -64,7 +67,7 @@ The following API endpoints are available:
 #### Get All Public Notes
 Endpoint: `GET /notes`
 
-Response:
+**Response:**
 
 ```
 [
@@ -88,7 +91,7 @@ Response:
 #### Get a Specific Note
 Endpoint: `GET /notes/<note_id>`
 
-Response:
+**Response:**
 
 ```
 {
@@ -103,7 +106,7 @@ Response:
 #### Create a New Note
 Endpoint: `POST /notes`
 
-Request body:
+**Request body:**
 ```
 {
     "text": "Some text to paste",
@@ -111,7 +114,7 @@ Request body:
 }
 ```
 
-Response:
+**Response:**
 
 ```
 {
@@ -126,7 +129,7 @@ Response:
 #### Update a Note
 Endpoint: `PUT /notes/<note_id>`
 
-Request body:
+**Request body:**
 
 ```
 {
@@ -134,7 +137,7 @@ Request body:
     "visibility": false
 }
 ```
-Response:
+**Response:**
 
 ```
 {
@@ -148,7 +151,7 @@ Response:
 #### Delete a Note
 Endpoint: `DELETE /notes/<note_id>`
 
-Response:
+**Response:**
 
 ```
 {
@@ -159,30 +162,30 @@ Response:
 ### Architecture Overview
 The application follows a simple 3-tier architecture, consisting of presentation layer, business logic layer, and data storage layer. Below is a brief explanation of each component, libraries, dependencies, and tools used in the project.
 
-Presentation Layer:
+**Presentation Layer:**
 
 - Flask (Python Web Framework)
 - Flask-RESTful (for building RESTful APIs)
 - Werkzeug (for handling HTTP requests and responses)
 
-Business Logic Layer:
+**Business Logic Layer:**
 
 - SQLite (as a database management system)
 - SQLAlchemy (for object-relational mapping)
 - Flask-Migrate (for handling database migrations)
 
-Data Storage Layer:
+**Data Storage Layer:**
 
 - SQLite (as a database management system)
 
-Dependencies:
+**Dependencies:**
 
 - Flask
 - SQLAlchemy
 - Flask-Migrate
 - Werkzeug
 
-Tools:
+**Tools:**
 
 - Docker (for containerizing the application)
 - Unittest (for testing the application)
