@@ -21,17 +21,14 @@ To run the application, follow these steps:
    ```
    git clone https://github.com/SwanVods/flask-pastebin-app.git
    ```
-
 3. Create a virtual environment: 
    ```
    python3 -m venv venv
    ```
-
 4. Activate the virtual environment: 
    ```
    source venv/bin/activate
    ```
-
 5. Install the dependencies: 
    ```
    pip install -r requirements.txt
