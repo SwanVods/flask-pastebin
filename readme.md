@@ -1,4 +1,4 @@
-# Flask Notebin App
+# Flask Pastebin-like App
 This is a simple Flask app that provides a pastebin-like functionality using a REST API. It uses SQLite as the database and can be easily containerized with Docker.
 
 - [Getting Started](#running-the-application)
@@ -36,14 +36,14 @@ Response:
     {
         "id": 1,
         "text": "Some public text",
-        "visibility": "public",
+        "visibility": true,
         "created_at": "2023-02-17T10:30:00",
         "updated_at": "2023-02-17T10:30:00"
     },
     {
         "id": 2,
         "text": "More public text",
-        "visibility": "public",
+        "visibility": true,
         "created_at": "2023-02-17T10:31:00",
         "updated_at": "2023-02-17T10:31:00"
     }
@@ -59,7 +59,7 @@ Response:
 {
     "id": 1,
     "text": "Some text to paste",
-    "visibility": "public",
+    "visibility": true,
     "created_at": "2023-02-17T10:30:00",
     "updated_at": "2023-02-17T10:30:00"
 }
@@ -72,7 +72,7 @@ Request body:
 ```
 {
     "text": "Some text to paste",
-    "visibility": True
+    "visibility": true
 }
 ```
 
@@ -82,7 +82,7 @@ Response:
 {
     "id": 1,
     "text": "Some text to paste",
-    "visibility": "public",
+    "visibility": true,
     "created_at": "2023-02-17T10:30:00",
     "updated_at": "2023-02-17T10:30:00"
 }
@@ -96,7 +96,7 @@ Request body:
 ```
 {
     "text": "Updated text",
-    "visibility": "private"
+    "visibility": false
 }
 ```
 Response:
@@ -105,7 +105,7 @@ Response:
 {
     "id": 1,
     "text": "Updated text",
-    "visibility": "private",
+    "visibility": false,
     "created_at": "2023-02-17T10:30:00",
     "updated_at": "2023-02-17T10:31:00"
 }
@@ -129,8 +129,6 @@ Presentation Layer:
 - Flask (Python Web Framework)
 - Flask-RESTful (for building RESTful APIs)
 - Werkzeug (for handling HTTP requests and responses)
-- Jinja2 (for rendering HTML templates)
-- Marshmallow (for object serialization and deserialization)
 
 Business Logic Layer:
 
@@ -148,7 +146,6 @@ Dependencies:
 - SQLAlchemy
 - Flask-Migrate
 - Werkzeug
-- Jinja2
 
 Tools:
 
