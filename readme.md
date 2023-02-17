@@ -1,9 +1,17 @@
 # Flask Pastebin-like App
 This is a simple Flask app that provides a pastebin-like functionality using a REST API. It uses SQLite as the database and can be easily containerized with Docker.
 
-- [Getting Started](#running-the-application)
-- [API Documentation](#available-api-endpoints)
-- [Architecture Overview](#architecture-overview)
+## Table of Contents
+- [Flask Pastebin-like App](#flask-pastebin-like-app)
+  - [Table of Contents](#table-of-contents)
+    - [Running the Application](#running-the-application)
+    - [Available API Endpoints](#available-api-endpoints)
+      - [Get All Public Notes](#get-all-public-notes)
+      - [Get a Specific Note](#get-a-specific-note)
+      - [Create a New Note](#create-a-new-note)
+      - [Update a Note](#update-a-note)
+      - [Delete a Note](#delete-a-note)
+    - [Architecture Overview](#architecture-overview)
 
 
 ### Running the Application
@@ -11,14 +19,44 @@ To run the application, follow these steps:
 
 1. Install Python 3 and pip on your system.
 2. Clone the repository: 
-   ```git clone https://github.com/your-username/flask-pastebin-app.git```
+   ```
+   git clone https://github.com/SwanVods/flask-pastebin-app.git
+   ```
 
-3. Create a virtual environment: `python3 -m venv venv`
-4. Activate the virtual environment: `source venv/bin/activate`
-5. Install the dependencies: `pip install -r requirements.txt`
-6. Create the database: `flask db upgrade`
-7. Start the server: `python run.py`
-8. The server should now be running on `http://localhost:5000`
+3. Create a virtual environment: 
+   ```
+   python3 -m venv venv
+   ```
+
+4. Activate the virtual environment: 
+   ```
+   source venv/bin/activate
+   ```
+6. Install the dependencies: 
+   ```
+   pip install -r requirements.txt
+   ```
+7. Initialize the database : 
+   ```
+   flask db init
+   ```
+8. Start migration: 
+   ```
+   flask db migrate
+   ```
+9.  Create the database: 
+   ```
+   flask db upgrade
+   ```
+10. Start the server: 
+   ```
+   flask run
+   ``` 
+   or you may use docker to run the application:
+   ```
+   docker-compose up
+   ```
+11. The server should now be running on `http://localhost:5000`
 
 To test the application, run the following command:
 ```python -m unittest test_views.py```
